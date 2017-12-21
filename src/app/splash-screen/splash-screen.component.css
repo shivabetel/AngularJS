@@ -1,0 +1,7 @@
+.splashScreenCss{
+    background: url('../../assets/images/PageLoading.gif');
+    background-repeat: no-repeat;
+    height: 100px;
+    background-position: center;
+/*    background-size: 30% 200%;*/
+}

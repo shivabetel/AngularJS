@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+      <div class="navbar-header">
+         <a routerLink="/" class="navbar-brand">MyVouchers</a>
+      </div>
+      <div class="collpase navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li routerLinkActive="active">
+              <!-- <a href="#" (click)="onSelect('recipe')">Recipes</a> -->
+              <a routerLink="viewVoucher">View</a>
+          </li>
+          <li routerLinkActive="active">
+            <!-- <a href="#" (click)="onSelect('shoppingList')">Shopping List</a> -->
+            <a [routerLink]="['buyVoucher']">Buy</a>
+        </li>
+        </ul>
+        
+      </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        <app-splash-screen *ngIf="isApplicationBusy; else routerModule"></app-splash-screen>
+        <ng-template #routerModule>
+            <router-outlet></router-outlet>
+        </ng-template>
+        
+    </div>
+  </div>
+</div>
